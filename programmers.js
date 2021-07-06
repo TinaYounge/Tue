@@ -39,23 +39,7 @@ function newProgrammers() {
     allFirstNameLength = [],
     allLastNameLength = [],
     allNameLength = [];
-  const NameOder = programmers.sort(),
-    firstNameOder = allFirstName.sort(),
-    lastNameOder = allLastName.sort();
-  console.log(firstNameOder);
-  function compareNumbers(a, b) {
-    return a.length - b.length;
-  }
-  // test
-  let lWithFirstName = allFirstName.filter((element) => {
-    return element.split("")[0] == "L";
-  });
-  console.log(lWithFirstName);
-  // let lWithName = programmers.filter((element) => {
-  //   return element.split("")[0] == "L";
-  // });
-  // console.log(lWithName);
-  // test
+
   for (let i = 0; i < programmers.length; i++) {
     const element = programmers[i];
     allNameLength.push(element.length);
@@ -69,6 +53,22 @@ function newProgrammers() {
     eachCharBreak = element.split("");
   }
   // result
+  const NameOder = programmers.sort(),
+    firstNameOder = allFirstName.sort(),
+    lastNameOder = allLastName.sort();
+  function compareNumbers(a, b) {
+    return a.length - b.length;
+  }
+  let lWithFirstName = allFirstName.filter((element) => {
+    return element.split("")[0] == "L";
+  });
+  let tWithLastName = allLastName.filter((element) => {
+    return element.split("")[0] == "T";
+  });
+  // Find all programmers where the first name's length is less than 4 characters.
+  // let lengthLessThanFouFirstName = allFirstName.filter((element) => {
+  //   return element.split("")[0] == "T";
+  // });
   document.getElementById("3.1").innerHTML = allFirstName.join(", ");
   document.getElementById("3.2").innerHTML = allLastName.join(", ");
   document.getElementById("3.3").innerHTML = allFirstNameLength.join(", ");
@@ -79,22 +79,7 @@ function newProgrammers() {
   document.getElementById("3.8").innerHTML = lastNameOder.join(", ");
   document.getElementById("3.9").innerHTML =
     NameOder.sort(compareNumbers).join(", ");
-  document.getElementById("3.10").innerHTML = lWithName.join(", ");
-  document.getElementById("3.11").innerHTML = lWithName.join(", ");
-
-  //     Use filter() to:
-
-  // Find all programmers whose first name starts with L.
-  // Find all programmers whose last name starts with T.
-  // Find all programmers where the first name's length is less than 4 characters.
-  // Find all programmers where the first name's length is greater than 4 characters.
-  // Find all programmers where the sum of the length of their name's characters is greater than 8.
-  // Find all programmers where the sum of the length of their name's characters is less than 8.
-  // Find all programmers where the last name begins with the letter K and ends with the letter n.
-  // Find all programmers whose first name is 3 characters long exactly.
-  // Find all programmers whose first name starts with ‘A'.
-  // Find all programmers whose first & last name start with the same character, for example, Abhinav Asthana.
-
-  // console.log(result);
+  document.getElementById("3.10").innerHTML = lWithFirstName.join(", ");
+  document.getElementById("3.11").innerHTML = tWithLastName.join(", ");
 }
 newProgrammers();
