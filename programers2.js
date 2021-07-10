@@ -184,6 +184,7 @@ let treePointSixtn = () => {
   document.getElementById("3.16").innerHTML = newPrograms1.join(", ");
 };
 treePointSixtn();
+
 // 3.17 Define a betterProgrammers using programmers whose first name is exactly 3 characters long.
 let treePointSevtn = () => {
   const newPrograms1 = programmers.filter(
@@ -192,3 +193,22 @@ let treePointSevtn = () => {
   document.getElementById("3.17").innerHTML = newPrograms1.join(", ");
 };
 treePointSevtn();
+
+3.22;
+const printNameChar = (element) => element.split("");
+const reverse = (el) => el.reverse();
+const join = (el) => el.join().replace(/,/g, "");
+let treePointtwentw = () => {
+  const newPrograms = programmers.map(printNameChar);
+  const newPrograms1 = newPrograms.map(reverse);
+  const newPrograms2 = newPrograms1.map(join);
+  document.getElementById("3.22").innerHTML = newPrograms2.join(", ");
+};
+treePointtwentw();
+
+// 3.23 Define a betterProgrammers array of objects with a property birthDate, which returns a date which places the programmer to be between 18-150 years old.
+
+let treePointtwenthre = () => {
+  document.getElementById("3.23").innerHTML = newPrograms2.join(", ");
+};
+treePointtwenthre();
