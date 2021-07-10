@@ -1,6 +1,6 @@
 .title {
   color: blue;
-  font-size: 1.3em;
+  font-size: 20px;
   margin-left: 2em;
 }
 
@@ -13,10 +13,10 @@
   margin-left: 3em;
 }
 
-/* section {
+section {
   padding: 5em;
   margin: 5em;
-} */
+}
 
 section:nth-of-type(odd) {
   background-color: lightblue;
