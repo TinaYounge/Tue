@@ -209,6 +209,11 @@ treePointtwentw();
 // 3.23 Define a betterProgrammers array of objects with a property birthDate, which returns a date which places the programmer to be between 18-150 years old.
 
 let treePointtwenthre = () => {
-  document.getElementById("3.23").innerHTML = newPrograms2.join(", ");
+  const years = (min, max) => Math.floor(Math.random() * (max - min) + min);
+  let b = programmers.reduce(
+    (hu1, hu2) => [...hu1, { name: hu2, years: years(18, 150) }],
+    []
+  );
+  document.getElementById("3.23").innerHTML = JSON.stringify(b);
 };
 treePointtwenthre();
