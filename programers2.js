@@ -156,10 +156,39 @@ treePointThitn();
 
 // 3.13 Define a betterProgrammers using programmers where the sum of the length of their name's characters is greater than 8
 let treePointFortn = () => {
-  // const newPrograms = programmers.map(printFullNameLength);
   const newPrograms1 = programmers.filter(
-    (a) => a.map(printFullNameLength) > 8
+    (a) => a.length - a.split(" ").length + 1 > 8
   );
   document.getElementById("3.14").innerHTML = newPrograms1.join(", ");
 };
 treePointFortn();
+
+// 3.14 Define a betterProgrammers using programmers where the sum of the length of their name's characters is less than 8
+let treePointFiftn = () => {
+  const newPrograms1 = programmers.filter(
+    (a) => a.length - a.split(" ").length + 1 < 8
+  );
+  document.getElementById("3.15").innerHTML = newPrograms1.join(", ");
+};
+treePointFiftn();
+
+// 3.16 Define a betterProgrammers using programmers where the last name begins with the letter K and ends with the letter n.
+let treePointSixtn = () => {
+  const newPrograms1 = programmers.filter(
+    (a) =>
+      a.split(" ")[a.split(" ").length - 1].split("")[0] == "K" &&
+      a.split(" ")[a.split(" ").length - 1].split("")[
+        a.split(" ")[a.split(" ").length - 1].split("").length - 1
+      ] == "n"
+  );
+  document.getElementById("3.16").innerHTML = newPrograms1.join(", ");
+};
+treePointSixtn();
+// 3.17 Define a betterProgrammers using programmers whose first name is exactly 3 characters long.
+let treePointSevtn = () => {
+  const newPrograms1 = programmers.filter(
+    (a) => a.split(" ")[0].split("").length == 3
+  );
+  document.getElementById("3.17").innerHTML = newPrograms1.join(", ");
+};
+treePointSevtn();
