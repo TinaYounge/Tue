@@ -214,6 +214,6 @@ let treePointtwenthre = () => {
     (hu1, hu2) => [...hu1, { name: hu2, years: years(18, 150) }],
     []
   );
-  document.getElementById("3.23").innerHTML = JSON.stringify(b);
+  document.getElementById("3.23").innerHTML = b;
 };
 treePointtwenthre();
